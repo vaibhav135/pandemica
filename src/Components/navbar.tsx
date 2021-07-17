@@ -1,6 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useRouteMatch,
+} from "react-router-dom";
 import Nav from "./nav";
+import SubNavBar from "./subnavbar";
 
 const Navbar = () => {
   return (
@@ -10,7 +16,9 @@ const Navbar = () => {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/home"></Route>
+          <Route path="/home">
+            <SubNavBar parentNav={"/home"} />
+          </Route>
           <Route path="/news"></Route>
           <Route path="/blogs"></Route>
           <Route path="/about"></Route>

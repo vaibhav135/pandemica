@@ -1,0 +1,35 @@
+
+.NavUl{
+	display:flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	list-style-type: none;
+	padding-right: 2em;
+	margin-top: 0%;
+	padding: 2em 4em 1em 0;
+	background-color: teal;
+	font-family: sans-serif;
+}
+
+#navli{
+	padding-right: 4em;
+}
+
+#navli,#link{
+	display: inline-block;
+}
+
+#link{
+	color: #c1e3f5;
+	text-decoration: none;
+	transition: 0.3ms;
+}
+
+#link.active{
+	font-weight: bolder;
+	color: #031b52;
+}
+
+#link:hover{
+	color:white;
+}

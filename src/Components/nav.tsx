@@ -1,31 +1,66 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Link, Redirect } from "react-router-dom";
+import "../Style/nav.css";
 
 const Nav = () => {
+  const [activeState, setActiveState] = useState("Home");
+
+  function changeActiveStatus(strStatus: string) {
+    setActiveState(strStatus);
+  }
+
   return (
-    <div>
+    <header>
       <nav>
-        <ul>
-          <li>
+        <ul className="NavUl">
+          <li id="navli">
             <Link to="/">
               <Redirect to="/home" />
             </Link>
           </li>
-          <li>
-            <Link to="/home">Home</Link>
+          <li id="navli">
+            <Link
+              id="link"
+              className={activeState === "Home" ? "active" : ""}
+              onClick={() => changeActiveStatus("Home")}
+              to="/home"
+            >
+              Home
+            </Link>
           </li>
-          <li>
-            <Link to="/news">News</Link>
+          <li id="navli">
+            <Link
+              id="link"
+              className={activeState === "News" ? "active" : ""}
+              onClick={() => changeActiveStatus("News")}
+              to="/news"
+            >
+              News
+            </Link>
           </li>
-          <li>
-            <Link to="/blogs">Blog</Link>
+          <li id="navli">
+            <Link
+              id="link"
+              className={activeState === "Blogs" ? "active" : ""}
+              onClick={() => changeActiveStatus("Blogs")}
+              to="/blogs"
+            >
+              Blog
+            </Link>
           </li>
-          <li>
-            <Link to="/about">About</Link>
+          <li id="navli">
+            <Link
+              id="link"
+              className={activeState === "About" ? "active" : ""}
+              onClick={() => changeActiveStatus("About")}
+              to="/about"
+            >
+              About
+            </Link>
           </li>
         </ul>
       </nav>
-    </div>
+    </header>
   );
 };
 

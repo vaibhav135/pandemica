@@ -1,0 +1,37 @@
+.subNav{
+	display: flex;
+	justify-content: center;
+}
+
+.SubNavUl{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: #afbcc7;
+	width:30%;
+	list-style-type: none;
+	border-radius: 2em;
+	height: 2em;
+	padding-top: 0.8em;
+	font-family: sans-serif;
+	margin-top: 1%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#sublink{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	margin-right: 3em;
+}
+
+#sublink.active{
+	color: #3e6587;
+}
+
+#sublink:hover{
+	color: #2d5c85;
+}
+
+
+
