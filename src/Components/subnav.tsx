@@ -19,27 +19,27 @@ const SubNav = ({ parentUrl }: { parentUrl: any }) => {
               onClick={() => changeActiveStatus(parentUrl)}
               to={`${parentUrl}`}
             >
-              menu1
+              Tables
             </Link>
           </li>
           <li id="subnavli">
             <Link
-              className={activeState === "menu2" ? "active" : ""}
+              className={activeState === "maps" ? "active" : ""}
               id="sublink"
-              onClick={() => changeActiveStatus("menu2")}
-              to={`${parentUrl}/menu2`}
+              onClick={() => changeActiveStatus("maps")}
+              to={`${parentUrl}/maps`}
             >
-              menu2
+              Maps
             </Link>
           </li>
           <li id="subnavli">
             <Link
-              className={activeState === "menu3" ? "active" : ""}
+              className={activeState === "graphs" ? "active" : ""}
               id="sublink"
-              onClick={() => changeActiveStatus("menu3")}
-              to={`${parentUrl}/menu3`}
+              onClick={() => changeActiveStatus("graphs")}
+              to={`${parentUrl}/graphs`}
             >
-              menu3
+              Graphs
             </Link>
           </li>
         </ul>

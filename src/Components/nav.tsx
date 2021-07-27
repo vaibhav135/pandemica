@@ -25,7 +25,7 @@ const Nav = () => {
               onClick={() => changeActiveStatus("Home")}
               to="/home"
             >
-              Home
+              Reports
             </Link>
           </li>
           <li id="navli">
