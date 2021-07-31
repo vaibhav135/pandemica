@@ -6,6 +6,7 @@ import {
   useRouteMatch,
 } from "react-router-dom";
 import Nav from "./nav";
+import News from "./news";
 import SubNavBar from "./subnavbar";
 
 const Navbar = () => {
@@ -17,9 +18,11 @@ const Navbar = () => {
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/home">
+            <News />
+          </Route>
+          <Route path="/news">
             <SubNavBar parentNav={"/home"} />
           </Route>
-          <Route path="/news"></Route>
           <Route path="/blogs"></Route>
           <Route path="/about"></Route>
         </Switch>

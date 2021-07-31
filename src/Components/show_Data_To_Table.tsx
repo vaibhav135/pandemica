@@ -52,10 +52,9 @@ const ShowDataTable = ({
         </thead>
         <tbody>
           {data.map((e: any, index: number) => (
-            <tr>
-              {" "}
-              {tableHeader.map((val: any) => (
-                <td>{data[index][val]}</td>
+            <tr key={index}>
+              {tableHeader.map((val: any, innerIndex: number) => (
+                <td key={innerIndex}>{data[index][val]}</td>
               ))}
             </tr>
           ))}

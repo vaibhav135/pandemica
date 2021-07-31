@@ -1,0 +1,42 @@
+.parentBar{
+	overflow-x: scroll;
+	width:100%;
+}
+
+
+.jDiv{
+	position: relative;
+	width: 100%;
+}
+
+.divLine{
+	margin-top: 60px;
+	margin-left: 20px;
+	width: 60%;
+	height: auto;
+}
+
+#region_title{
+	margin-top: 60px;
+	margin-left: 20px;
+}
+
+.divDoughnut{
+	width: 30%;
+	margin-left: 70px;
+	margin-top: 40px;
+}
+
+.divMaster{
+	display: flex;
+	flex-direction: row;
+	margin-top: 40px;
+}
+/*.parentBar > div{*/
+	/*position: absolute;*/
+	/*overflow: auto;*/
+	/*top: 0;*/
+	/*left: 0;*/
+	/*right: 0;*/
+	/*bottom: 0;*/
+/*}*/
