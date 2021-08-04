@@ -1,36 +1,24 @@
 import React, { useState, useEffect } from "react";
-import FilterDataForTable from "./filter_data_for_tables";
-//import Reports from "./report";
+import FilterData from "./filter_data";
 import DataSelectorTable from "./dataSelectorTable";
 
 const ReportTable = () => {
   const [data, setData] = useState<any>(null);
   console.log("inside tables");
 
-  //let val;
   useEffect(() => {
-    //console.log(callFunc().then((e) => e));
     callFunc();
   }, []);
 
   const callFunc = async () => {
-    const somedata = await FilterDataForTable();
+    const somedata = await FilterData();
     setData(somedata);
-    //console.log(val);
   };
-  console.log("showing data: " + (data === null ? 0 : JSON.stringify(data)));
 
-  let dataToTable;
   if (data !== null && data !== undefined) {
-    //console.log(
-    //Object.entries(data)[0][0] === "global_deaths"
-    //? "yup ur right bitch"
-    //: "fuck u"
-    //);
-    dataToTable = Object.entries(data);
     return (
       <div>
-        <DataSelectorTable data={dataToTable} />
+        <DataSelectorTable data={data} />
       </div>
     );
   } else return <h1> Couldn't fetch the data </h1>;

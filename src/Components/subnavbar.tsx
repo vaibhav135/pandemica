@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SubNav from "./subnav";
-//import Reports from "./report";
 import ReportTable from "./report_table";
 import ReportGraph from "./report_graph";
 import Maps from "./maps";

@@ -3,11 +3,12 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  useRouteMatch,
+  Redirect,
 } from "react-router-dom";
 import Nav from "./nav";
 import News from "./news";
 import SubNavBar from "./subnavbar";
+import CovidGuideLines from "./covid_guidelines";
 
 const Navbar = () => {
   return (
@@ -18,12 +19,14 @@ const Navbar = () => {
             renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/home">
-            <News />
-          </Route>
-          <Route path="/news">
             <SubNavBar parentNav={"/home"} />
           </Route>
-          <Route path="/blogs"></Route>
+          <Route path="/news">
+            <News />
+          </Route>
+          <Route path="/covid-guidelines">
+            <CovidGuideLines />
+          </Route>
           <Route path="/about"></Route>
         </Switch>
       </div>

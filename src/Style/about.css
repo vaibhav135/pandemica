@@ -1,0 +1,46 @@
+.about_container{
+	display: flex;
+	flex-direction: column;
+	padding-left: 3em;
+	text-overflow: clip;
+}
+
+#about_p{
+	font-size: 17px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+	/*flex-wrap: wrap;*/
+}
+
+#about_link{
+	text-decoration: none;
+}
+
+#about_link:hover{
+	color: orange;	
+	text-decoration: underline;
+}
+
+#about_link_icons{
+	text-decoration: none;
+	color: black;
+	width: 100%;
+}
+
+#about_footer{
+	text-align: center;
+}
+
+#footer_icons{
+	padding-top: 1em;
+}
+
+#about_icons{
+	font-size: 2em;
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+#about_h2{
+
+}

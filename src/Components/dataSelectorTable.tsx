@@ -5,21 +5,6 @@ import "../Style/dataSelector.css";
 const DataSelectorTable = ({ data }: { data: any }) => {
   //console.log(data);
   const [currentSelected, setCurrentSelected] = useState("global_deaths");
-  let idx: number = 0;
-  let dataArr = data[0][1];
-
-  for (let index in data) {
-    if (data[index][0] === currentSelected) {
-      idx = Number(index);
-      dataArr = data[idx][1];
-      break;
-    }
-  }
-
-  //const optionBg = {
-  //backgroundColor: "white",
-  //};
-  //console.log("index: " + idx + " dataArr: " + dataArr);
   console.log("currentSelected: " + currentSelected);
 
   return (
@@ -37,7 +22,7 @@ const DataSelectorTable = ({ data }: { data: any }) => {
         </option>
         <option value="global_vaccine_data"> Global Vaccines Data </option>
       </select>
-      <Table data={dataArr} headingMeta={data[idx][0]} />
+      <Table data={data} headingMeta={currentSelected} />
     </div>
   );
 };

@@ -41,11 +41,11 @@ const Nav = () => {
           <li id="navli">
             <Link
               id="link"
-              className={activeState === "Blogs" ? "active" : ""}
-              onClick={() => changeActiveStatus("Blogs")}
-              to="/blogs"
+              className={activeState === "CovidGuideLines" ? "active" : ""}
+              onClick={() => changeActiveStatus("CovidGuideLines")}
+              to="/covid-guidelines"
             >
-              Blog
+              Covid-Guidelines
             </Link>
           </li>
           <li id="navli">

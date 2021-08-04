@@ -10,23 +10,16 @@ const headings: any = {
 };
 
 const Table = ({ data, headingMeta }: { data: any; headingMeta: string }) => {
-  //console.log(data);
-  const outerData = data.map((e: any) => e);
-  console.log("outerData length: " + outerData.length);
-
-  //info: datHeading is actually the table headers
-  const dataHeading = Object.keys(outerData[0]);
-  console.log("dataHeading: " + dataHeading);
-
   let heading: string = headings[headingMeta];
   console.log("heading: " + heading);
+  console.log(data);
 
   let callFunc;
   callFunc = (
     <ShowDataTable
-      data={outerData}
+      data={data[headingMeta]["value"]}
       heading={heading}
-      tableHeadermeta={dataHeading}
+      tableHeadermeta={data[headingMeta]["headers"]}
     />
   );
 
