@@ -1,3 +1,21 @@
+# Pandemica
+
+This is a covid tracker project created with react **(create-react-app)**. Pandemica provides you 
+latest covid-19 data (in a visualized manner), covid news and covid-guidelines.
+
+## Packages used
+[react-chartjs-2](https://www.npmjs.com/package/react-chartjs-2)
+[chartjs-plugin-zoom](https://www.npmjs.com/package/chartjs-plugin-zoom)
+[react-icons](https://react-icons.github.io/react-icons/)
+
+## How to run the project locally
+- Create a directory in your local machine or just do `git clone (remote url)`
+- Get inside the cloned repo with `mkdir pandemica`
+- Create a `.env` file in the root of the local repo and add your api-key inside it.
+-  To get your api-key visit [newsApi](https://newsapi.org/)
+- After getting your api-key, edit the `.env` file and add the follwing line in it `REACT_APP_NEWS_API_KEY=(insert your api-key)`
+- Just do `npm install` and Voila your web-app is up and running
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -44,3 +62,5 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
