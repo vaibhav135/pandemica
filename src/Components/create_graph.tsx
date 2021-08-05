@@ -1,7 +1,6 @@
 import React from "react";
 import GlobalGraph from "./graph_global";
 import CountriesGraph from "./graph_countries";
-import "../Style/create_graph.css";
 
 const CreateGraph = ({
   data,
@@ -12,6 +11,7 @@ const CreateGraph = ({
   selectedRegionIdRec,
   selectedRegionIdVaccineAd,
   selectedRegionIdConf,
+  currentSelectedForGraph,
 }: {
   data: any;
   selectedRegion: string;
@@ -21,6 +21,7 @@ const CreateGraph = ({
   selectedRegionIdRec: string;
   selectedRegionIdVaccineAd: string;
   selectedRegionIdConf: string;
+  currentSelectedForGraph: string;
 }) => {
   const region =
     selectedRegion === "Global" ? (
@@ -28,6 +29,7 @@ const CreateGraph = ({
         data={data}
         countries_list={countries_list}
         countries_vaccine_admin={countries_vaccine_admin}
+        currentSelectedForGraph={currentSelectedForGraph}
       />
     ) : (
       <CountriesGraph
@@ -42,6 +44,6 @@ const CreateGraph = ({
       />
     );
 
-  return <>{region} </>;
+  return <div>{region} </div>;
 };
 export default CreateGraph;

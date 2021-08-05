@@ -14,8 +14,7 @@ const Table = ({ data, headingMeta }: { data: any; headingMeta: string }) => {
   console.log("heading: " + heading);
   console.log(data);
 
-  let callFunc;
-  callFunc = (
+  let callFunc = (
     <ShowDataTable
       data={data[headingMeta]["value"]}
       heading={heading}

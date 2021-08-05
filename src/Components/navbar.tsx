@@ -9,6 +9,7 @@ import Nav from "./nav";
 import News from "./news";
 import SubNavBar from "./subnavbar";
 import CovidGuideLines from "./covid_guidelines";
+import About from "./abouts";
 
 const Navbar = () => {
   return (
@@ -27,7 +28,9 @@ const Navbar = () => {
           <Route path="/covid-guidelines">
             <CovidGuideLines />
           </Route>
-          <Route path="/about"></Route>
+          <Route path="/about">
+            <About />
+          </Route>
         </Switch>
       </div>
     </Router>

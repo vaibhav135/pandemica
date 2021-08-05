@@ -6,13 +6,15 @@ const GlobalGraph = ({
   data,
   countries_list,
   countries_vaccine_admin,
+  currentSelectedForGraph,
 }: {
   data: any;
   countries_list: string[];
   countries_vaccine_admin: string[];
+  currentSelectedForGraph: string;
 }) => {
-  const [currentSelectedForGraph, setCurrentSelectedForGraph] =
-    useState("global_deaths");
+  //const [currentSelectedForGraph, setCurrentSelectedForGraph] =
+  //useState("global_deaths");
 
   defaults.color = "#5e5e5d";
   defaults.font.weight = "normal";
@@ -96,24 +98,25 @@ const GlobalGraph = ({
   };
   return (
     <div className="parentBar">
-      <select
-        value={currentSelectedForGraph}
-        onChange={(e: any) => setCurrentSelectedForGraph(e.target.value)}
-      >
-        <option value="global_deaths"> Global Deaths </option>
-        <option value="global_recoveries"> Global Recoveries </option>
-        <option value="global_confirmed"> Global Confirmed </option>
-        <option value="global_vaccine_admin">
-          Global Vaccines Administered
-        </option>
-      </select>
-
       <div className="jDiv">
         <Bar className={"Bar"} data={barData} options={options} />{" "}
       </div>
     </div>
   );
 };
+
+//<select
+//value={currentSelectedForGraph}
+//onChange={(e: any) => setCurrentSelectedForGraph(e.target.value)}
+//className="graphGlobal_selector"
+//>
+//<option value="global_deaths"> Global Deaths </option>
+//<option value="global_recoveries"> Global Recoveries </option>
+//<option value="global_confirmed"> Global Confirmed </option>
+//<option value="global_vaccine_admin">
+//Global Vaccines Administered
+//</option>
+//</select>
 //<Bar
 //className={"Bar"}
 //height={770}

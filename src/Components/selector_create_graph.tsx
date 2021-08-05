@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import CreateGraph from "./create_graph";
+import "../Style/create_graph.css";
 
 const SelectorCreateGraph = ({ data }: { data: any }) => {
   const [regionSelected, setRegionSelected] = useState("Global");
+  const [currentSelectedForGraph, setCurrentSelectedForGraph] =
+    useState("global_deaths");
 
   let countries: string[] = [],
     countries_vaccine_admin: string[] = [];
@@ -75,19 +78,37 @@ const SelectorCreateGraph = ({ data }: { data: any }) => {
     //console.log(data[i]["report-for-global"]);
     //console.log(i);
   }
+
+  const globalSelector = (
+    <select
+      value={currentSelectedForGraph}
+      onChange={(e: any) => setCurrentSelectedForGraph(e.target.value)}
+      className="graphGlobal_selector"
+    >
+      <option value="global_deaths"> Global Deaths </option>
+      <option value="global_recoveries"> Global Recoveries </option>
+      <option value="global_confirmed"> Global Confirmed </option>
+      <option value="global_vaccine_admin">Global Vaccines Administered</option>
+    </select>
+  );
+
   return (
     <>
-      <select
-        value={regionSelected}
-        onChange={(e) => setRegionSelected(e.target.value)}
-      >
-        <option value={"Global"}> Global </option>
-        {countries.map((val: string, index: number) => (
-          <option key={index} value={val}>
-            {val}{" "}
-          </option>
-        ))}
-      </select>
+      <div className="selectorsInGraph_div">
+        <select
+          value={regionSelected}
+          onChange={(e) => setRegionSelected(e.target.value)}
+          className="create_graph_Selector"
+        >
+          <option value={"Global"}> Global </option>
+          {countries.map((val: string, index: number) => (
+            <option key={index} value={val}>
+              {val}{" "}
+            </option>
+          ))}
+        </select>
+        {regionSelected === "Global" ? globalSelector : <> </>}
+      </div>
       <CreateGraph
         data={data}
         selectedRegion={regionSelected}
@@ -97,6 +118,7 @@ const SelectorCreateGraph = ({ data }: { data: any }) => {
         selectedRegionIdRec={selectedRegionIdRec}
         selectedRegionIdVaccineAd={selectedRegionIdVaccineAd}
         selectedRegionIdConf={selectedRegionIdConf}
+        currentSelectedForGraph={currentSelectedForGraph}
       />
     </>
   );

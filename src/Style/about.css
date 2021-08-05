@@ -29,6 +29,7 @@
 
 #about_footer{
 	text-align: center;
+	margin-top: 3em;
 }
 
 #footer_icons{
@@ -39,6 +40,10 @@
 	font-size: 2em;
 	padding-right: 1em;
 	padding-left: 1em;
+}
+
+#about_icons:hover{
+	cursor:pointer;
 }
 
 #about_h2{

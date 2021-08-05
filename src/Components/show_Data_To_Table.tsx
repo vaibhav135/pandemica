@@ -41,7 +41,7 @@ const ShowDataTable = ({
 
   return (
     <div>
-      <h1> {heading} </h1>
+      <h1 id="showDataToTable_h1"> {heading} </h1>
       <table className="content-table">
         <thead>
           <tr>

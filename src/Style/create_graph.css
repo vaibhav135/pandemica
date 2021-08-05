@@ -9,10 +9,17 @@
 	width: 100%;
 }
 
+.divMaster{
+	padding-top: 5em;
+	/*padding-right: 11em;*/
+
+	padding-right: 16em;
+}
+
 .divLine{
 	margin-top: 60px;
 	margin-left: 20px;
-	width: 60%;
+	width: 80%;
 	height: auto;
 }
 
@@ -32,11 +39,35 @@
 	flex-direction: row;
 	margin-top: 40px;
 }
-/*.parentBar > div{*/
-	/*position: absolute;*/
-	/*overflow: auto;*/
-	/*top: 0;*/
-	/*left: 0;*/
-	/*right: 0;*/
-	/*bottom: 0;*/
-/*}*/
+
+/*option selector in selector_create_graph*/
+
+ .create_graph_Selector{
+  letter-spacing: 3px;
+  height: 3rem;
+  font-size: 0.9rem;
+  background-color: white;
+  padding-left: 2em;
+  border: 3px solid gray;
+  transition: .3s ease-in-out;
+  float: left;
+  margin-top: 2em;
+  margin-left: 2em;
+  margin-bottom: 3em;
+
+}
+
+.graphGlobal_selector{
+  letter-spacing: 3px;
+  height: 3rem;
+  font-size: 0.9rem;
+  background-color: white;
+  padding-left: 2em;
+  border: 3px solid gray;
+  transition: .3s ease-in-out;
+  float: right;
+  margin-top: 2em;
+  margin-right: 2em;
+  margin-bottom: 3em;
+}
+
